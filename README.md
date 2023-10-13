@@ -1,8 +1,8 @@
-### Description
+### Description
 
 Ce projet permet de créer une image docker d'un service PHP qui permet de convertir des vidéos avec RabbitMQ.
 
-### Installation
+### Installation
 
 ```bash
 git clone https://github.com/heatsinkru/PHP-APP.git && \
