@@ -1,5 +1,8 @@
 <?php
 
+// Turn off all error reporting
+error_reporting(0);
+
 include ('vendor/autoload.php');
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
