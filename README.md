@@ -1,21 +1,17 @@
-# PHP App Example
+### Description
 
-## Requirements To Run Test
-1. Composer
-2. PHP7
-3. PHP Sockets Extensions Installed
+Ce projet permet de créer une image docker d'un service PHP qui permet de convertir des vidéos avec RabbitMQ.
 
+### Installation
 
-## Video Processing and RabbitMQ
-#### Overview
-The services shows a basic example of how to create a service for processing videos with RabbitMQ.
+```bash
+git clone https://github.com/heatsinkru/PHP-APP.git && \
+cd PHP-APP
+```
 
-#### How To Run
-1. Ensure RabbitMQ is installed and running locally
-3. Run `composer install` to install required packages
-4. Open up two tabs in your console
-5. In one tab, run `php server.php`
-6. In the other tab, run `php client.php`
+### Utilisation
 
-## Source
-<https://github.com/ProdigyView-Toolkit/Microservices-Examples-PHP>
+```bash
+docker compose up --build -d && \
+docker compose exec -it php /bin/bash
+```

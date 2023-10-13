@@ -6,8 +6,19 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
-    depends_on:
-      - rabbitmq
 
   rabbitmq:
     image: rabbitmq:3.12.4-management
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3        
+
+  app:
+    build:
+      context: .
+    entrypoint: php server.php
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
