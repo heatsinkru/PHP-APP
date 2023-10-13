@@ -1,4 +1,6 @@
-FROM php:7.4-apache-bullseye
+FROM php:8.2-apache-bullseye
+
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN <<EOF 
 apt-get update -y
@@ -23,6 +25,7 @@ EOF
 
 COPY . /var/www/html/
 WORKDIR /var/www/html/
+RUN composer update
 RUN composer install
 
 EXPOSE 80
