@@ -12,6 +12,5 @@ cd PHP-APP
 ### Utilisation
 
 ```bash
-docker compose up --build -d && \
-docker compose exec -it php /bin/bash
+docker compose up --build -d
 ```
